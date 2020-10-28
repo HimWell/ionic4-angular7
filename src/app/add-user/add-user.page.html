@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Product Den - Add User</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div style="margin:5px; text-align: right">
+        <ion-icon name="contact" style="width:45px; height:30px;"></ion-icon>
+        Logged in User: {{ selectedUser.username }}
+    </div>
+
+    <form #f="ngForm" style="margin:25px;">
+        <ion-item>
+            <ion-icon name="person"></ion-icon>
+            <ion-input type="text" placeholder="Name" [(ngModel)]="users.name" name="name" id="name" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z0-9.-_]{2,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" placeholder="Username" [(ngModel)]="users.username" name="username" id="username" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="lock"></ion-icon>
+            <ion-input type="text" placeholder="Password" [(ngModel)]="users.password" name="password" id="password" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="people"></ion-icon>
+            <ion-input type="text" placeholder="Role" [(ngModel)]="users.role" name="role" id="role" required></ion-input>
+        </ion-item>
+
+        <br>
+
+        <ion-button type="button" shape="round" color="success" expand="block" [disabled]="!f.valid" (click)="Create()">Add User</ion-button>
+        <br>
+        <ion-button type="button" shape="round" color="warning" expand="block" (click)="onClose()">Cancel</ion-button>
+
+    </form>
+</ion-content>

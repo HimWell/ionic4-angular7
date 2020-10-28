@@ -1,0 +1,41 @@
+<ion-tabs>
+
+    <ion-tab-button tab="home">
+        <ion-router-outlet name="home"></ion-router-outlet>
+    </ion-tab-button>
+    <ion-tab-button tab="details">
+        <ion-router-outlet name="details"></ion-router-outlet>
+    </ion-tab-button>
+    <ion-tab-button tab="add">
+        <ion-router-outlet name="add"></ion-router-outlet>
+    </ion-tab-button>
+    <ion-tab-button tab="edit">
+        <ion-router-outlet name="edit"></ion-router-outlet>
+    </ion-tab-button>
+
+    <ion-tab-bar slot="bottom">
+
+        <!-- href="/tabs/(home:home)" -->
+        <ion-tab-button tab="home" routerLink="../home">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="details" routerLink="../details">
+            <ion-icon name="eye"></ion-icon>
+            <ion-label>Details</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="add" routerLink="../add">
+            <ion-icon name="add"></ion-icon>
+            <ion-label>Add</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="edit" routerLink="../edit">
+            <ion-icon name="create"></ion-icon>
+            <ion-label>Edit</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+
+</ion-tabs>

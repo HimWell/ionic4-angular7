@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title> Product Den - Product List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div style="margin:5px; text-align: right">
+        <ion-icon name="contact" style="width:45px; height:30px;"></ion-icon>
+        Logged in User: {{ selectedUser.username }}
+    </div>
+
+    <div style="margin:26px;"></div>
+    <button mat-mini-fab color="primary" class="add-button" (click)="Refresh()" style="background-color: whitesmoke; color: black;">
+        <ion-icon name="refresh" style="width:45px; height:25px;"></ion-icon>
+    </button>
+
+    <ion-searchbar (keyup)='searchFilter($event)'></ion-searchbar>
+
+    <ngx-datatable #tblProducts class="fullscreen" [rows]="dataSource" [ngClass]="tablestyle" [columnMode]="'force'" [headerHeight]="'auto'" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [scrollbarH]="true" style="margin:20px;">
+
+        <ngx-datatable-column name="" id="" class="fonts" [width]="50">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button (click)="editProductData(row, userData)" mat-mini-fab color="primary" style="background-color: whitesmoke; color: black;">
+                    <ion-icon name="create" style="width:25px; height:20px;"></ion-icon>
+                </button>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Product Name" id="prodName" class="fonts" [width]="130">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.prodName }}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Product Description" id="prodDesc" class="fonts" [width]="170">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.prodDesc }}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Product Price" id="prodPrice" class="fonts" [width]="110">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.prodPrice | currency: 'R ' }}
+            </ng-template>
+        </ngx-datatable-column>
+
+    </ngx-datatable>
+
+    <div style="margin:40px;">
+        <ion-button shape="round" color="success" expand="block" (click)="addRedirect()">Add Product</ion-button>
+        <br>
+        <ion-button shape="round" color="primary" expand="block" (click)="loadUsers()">Users</ion-button>
+        <br>
+        <ion-button shape="round" color="warning" expand="block" (click)="Logout()">Logout</ion-button>
+    </div>
+
+</ion-content>

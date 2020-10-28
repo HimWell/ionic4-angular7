@@ -1,0 +1,39 @@
+{
+    "products": [{
+            "id": "1",
+            "prodName": "TV",
+            "prodDesc": "Sony Bravia",
+            "prodPrice": "8999"
+        },
+        {
+            "id": "2",
+            "prodName": "DVD",
+            "prodDesc": "Phillaps Multi-play",
+            "prodPrice": "500"
+        },
+        {
+            "id": "3",
+            "prodName": "VHR",
+            "prodDesc": "LG Legacy Series",
+            "prodPrice": "200"
+        },
+        {
+            "id": "4",
+            "prodName": "Laptop",
+            "prodDesc": "ASUS Gaming",
+            "prodPrice": "13500"
+        },
+        {
+            "id": "5",
+            "prodName": "iMac",
+            "prodDesc": "Apple Inc",
+            "prodPrice": "14999"
+        },
+        {
+            "id": "6",
+            "prodName": "PC",
+            "prodDesc": "Sahara X-Range",
+            "prodPrice": "20000"
+        }
+    ]
+}

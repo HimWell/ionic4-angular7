@@ -1,0 +1,8 @@
+{
+    "/ACLServices-web": {
+        "target": "http://dev.aspenconnect.biz",
+        "secure": false,
+        "logLevel": "debug",
+        "headers": { "host": "dev.aspenconnect.biz" }
+    }
+}

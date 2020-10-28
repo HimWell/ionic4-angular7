@@ -1,0 +1,24 @@
+{
+    "users": [{
+            "id": "1",
+            "name": "Himal Chowhan",
+            "username": "hchowhan@i1solutions.co.za",
+            "password": "Password1",
+            "role": "Junior Developer"
+        },
+        {
+            "id": "2",
+            "name": "Gerrit Jacobs",
+            "username": "gjacobs@i1solutions.co.za",
+            "password": "Password2",
+            "role": "Senior Developer"
+        },
+        {
+            "id": "3",
+            "name": "Rhandi Makhubele",
+            "username": "rmakhubele@i1solutions.co.za",
+            "password": "Password3",
+            "role": "HR Manager"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Product Den - Edit Product</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div style="margin:5px; text-align: right">
+        <ion-icon name="contact" style="width:45px; height:30px;"></ion-icon>
+        Logged in User: {{ selectedUser.username }}
+    </div>
+
+    <form #f="ngForm" style="margin:28px;">
+        <ion-item>
+            <ion-icon name="basket"></ion-icon>
+            <ion-input type="text" placeholder="Product Name" [(ngModel)]="selectedProduct.prodName" name="prodName" id="prodName" required>
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="paper"></ion-icon>
+            <ion-input type="text" placeholder="Product Description" [(ngModel)]="selectedProduct.prodDesc" name="prodDesc" id="prodDesc" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="cash"></ion-icon>
+            <ion-input type="number" placeholder="Product Price" [(ngModel)]="selectedProduct.prodPrice" name="prodPrice" id="prodPrice" required></ion-input>
+        </ion-item>
+
+        <br>
+
+        <ion-button shape="round" color="success" expand="block" [disabled]="!f.valid" (click)="Save()">Save Product</ion-button>
+        <br>
+        <ion-button shape="round" color="danger" expand="block" [disabled]="!f.valid" (click)="Remove()">Delete Product</ion-button>
+        <br>
+        <ion-button type="button" shape="round" color="warning" expand="block" (click)="onClose()">Cancel</ion-button>
+    </form>
+</ion-content>
